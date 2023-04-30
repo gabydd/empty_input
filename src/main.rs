@@ -9,6 +9,7 @@ cfg_if! {
             use leptos::*;
             use leptos_actix::{generate_route_list, LeptosRoutes};
             use empty_input::app::*;
+            simple_logger::init_with_level(log::Level::Info).expect("couldn't initialize logging");
             register_server_functions();
 
             let conf = get_configuration(None).await.unwrap();
